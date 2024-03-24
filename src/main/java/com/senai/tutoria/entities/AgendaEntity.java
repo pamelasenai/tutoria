@@ -28,7 +28,7 @@ public class AgendaEntity {
 
     @ManyToOne
     @JoinColumn(name = "aluno_id", nullable = false)
-    private AgendaEntity aluno;
+    private AlunoEntity aluno;
 
     @ManyToOne
     @JoinColumn(name = "tutor_id", nullable = false)
