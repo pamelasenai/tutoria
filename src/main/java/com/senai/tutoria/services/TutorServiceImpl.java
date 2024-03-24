@@ -39,7 +39,13 @@ public class TutorServiceImpl implements TutorService {
 
     @Override
     public TutorEntity alterar(Long id, TutorEntity tutor) {
-        buscarPorId(id);
+        TutorEntity tutorEntity = buscarPorId(id);
+        if(tutor.getNome() == null || tutor.getNome().isBlank()) {
+            tutor.setNome(tutorEntity.getNome());
+        }
+        if(tutor.getEspecialidade() == null || tutor.getEspecialidade().isBlank()) {
+            tutor.setEspecialidade(tutorEntity.getEspecialidade());
+        }
         tutor.setId(id);
         return repository.save(tutor);
     }
