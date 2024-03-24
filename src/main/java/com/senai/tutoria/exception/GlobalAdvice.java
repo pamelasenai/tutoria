@@ -1,10 +1,13 @@
 package com.senai.tutoria.exception;
 
 import com.senai.tutoria.exception.dto.Erro;
+import org.springframework.boot.json.JsonParseException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import java.io.IOException;
 
 @ControllerAdvice
 public class GlobalAdvice {
@@ -34,5 +37,4 @@ public class GlobalAdvice {
                 .build();
         return ResponseEntity.status(404).body(erro);
     }
-
 }
