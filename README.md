@@ -47,13 +47,20 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
                 "especialidade": "HTML"
             }
         ```
-- POST ```/agendas```: Cria uma nova agenda.
+- POST ```/agendamentos```: Cria uma nova agenda.
     * RequestBody:
       ```json
             {
-                "titulo": "titulo",
-                "autor": "autor",
-                "anoPublicacao": 2025
+                "data": "2024-03-22",
+                "status": "AGENDADO",
+                "tema": "Java",
+                "descricao": "Auxilio exercício 4",
+                "aluno": {
+                "id": 1
+                },
+                "tutor": {
+                "id": 2
+                }
             }
         ```
 - POST ```/materias```: Cria um novo material.
@@ -75,7 +82,7 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 
 - GET ```/alunos/:id```: Retorna apenas o aluno com id informado.
 - GET ```/tutores/:id```: Retorna apenas o tutor com id informado.
-- GET ```/agendas/:id```: Retorna apenas a agenda com id informado.
+- GET ```/agendamentos/:id```: Retorna apenas a agenda com id informado.
 - GET ```/materias/:id```: Retorna apenas o material com id informado.
 
 ### UPDATE
@@ -94,7 +101,22 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
                 "especialidade": "HTML"
             }
         ```
-- PUT ```/agendas/:id```: Altera os dados da agenda com id informado.
+- PUT ```/agendamentos/:id```: Altera os dados da agenda com id informado.
+    * RequestBody:
+      ```json
+            {
+                "data": "2024-03-22",
+                "status": "AGENDADO",
+                "tema": "Java",
+                "descricao": "Auxilio exercício 4",
+                "aluno": {
+                "id": 1
+                },
+                "tutor": {
+                "id": 2
+                }
+            }
+        ```
 - PUT ```/materias/:id```: Altera os dados do material com id informado.
 
 ### DELETE
@@ -108,7 +130,7 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 - [x] [Exercício 1 - Setup: Projeto de tutoria](#-m1s10-ex-1---setup-projeto-de-tutoria)
 - [x] [Exercício 2 - CRUD Alunos](#-m1s10-ex-2---crud-alunos)
 - [x] [Exercício 3 - CRUD Tutores](#-m1s10-ex-3---crud-tutores)
-- [ ] [Exercício 4 - CRUD Agendamento](#-m1s10-ex-4---crud-agendamento)
+- [x] [Exercício 4 - CRUD Agendamento](#-m1s10-ex-4---crud-agendamento)
 - [ ] [Exercício 5 - CRUD Materiais](#-m1s10-ex-5---crud-materiais)
 - [ ] [Exercício 6 - Consultar agendamentos](#-m1s10-ex-6---consultar-agendamentos)
 - [ ] [Exercício 7 - Consultar próximos agendamentos](#-m1s10-ex-7---consultar-próximos-agendamentos)
