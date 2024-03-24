@@ -36,7 +36,10 @@ public class AlunoServiceImpl implements AlunoService {
 
     @Override
     public AlunoEntity alterar(Long id, AlunoEntity aluno) {
-        buscarPorId(id);
+        AlunoEntity alunoEntity = buscarPorId(id);
+        if(aluno.getNome() == null || aluno.getNome().isBlank()) {
+            aluno.setNome(alunoEntity.getNome());
+        }
         aluno.setId(id);
         return repository.save(aluno);
     }
