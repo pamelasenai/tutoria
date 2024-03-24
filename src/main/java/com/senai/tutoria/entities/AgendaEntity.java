@@ -1,5 +1,6 @@
 package com.senai.tutoria.entities;
 
+import com.senai.tutoria.enums.StatusEnum;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,7 +18,8 @@ public class AgendaEntity {
     private LocalDate data;
 
     @Column(nullable = false, length = 10)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private StatusEnum status = StatusEnum.AGENDADO;
 
     @Column(nullable = false, length = 150)
     private String tema;

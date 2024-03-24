@@ -36,9 +36,7 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
     * RequestBody:
       ```json
             {
-                "titulo": "titulo",
-                "autor": "autor",
-                "anoPublicacao": 2025
+                "nome": "Dummy"
             }
         ```
 - POST ```/tutores```: Cria um novo tutor.
@@ -50,7 +48,7 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
                 "anoPublicacao": 2025
             }
         ```
-- POST ```/agendamentos```: Cria uma nova agenda.
+- POST ```/agendas```: Cria uma nova agenda.
     * RequestBody:
       ```json
             {
@@ -71,32 +69,38 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 <!-- //TODO alterar RequestBody-->
 
 ### READ
-- GET ```/alunos```:
-- GET ```/tutores```:
-- GET ```/agendamentos```:
-- GET ```/materias```:
+- GET ```/alunos```: Retorna lista de todos os alunos.
+- GET ```/tutores```: Retorna lista de todos os tutores.
+- GET ```/agendas```: Retorna lista de todas as agendas.
+- GET ```/materias```: Retorna lista de todos os materiais.
 
-- GET ```/alunos/:id```:
-- GET ```/tutores/:id```:
-- GET ```/agendamentos/:id```:
-- GET ```/materias/:id```:
+- GET ```/alunos/:id```: Retorna apenas o aluno com id informado.
+- GET ```/tutores/:id```: Retorna apenas o tutor com id informado.
+- GET ```/agendas/:id```: Retorna apenas a agenda com id informado.
+- GET ```/materias/:id```: Retorna apenas o material com id informado.
 
 ### UPDATE
-- PUT ```/alunos/:id```:
-- PUT ```/tutores/:id```:
-- PUT ```/agendamentos/:id```:
-- PUT ```/materias/:id```:
+- PUT ```/alunos/:id```: Altera os dados do aluno com id informado.
+    * RequestBody:
+      ```json
+            {
+                "nome": "Dummy"
+            }
+        ```
+- PUT ```/tutores/:id```: Altera os dados do tutor com id informado.
+- PUT ```/agendas/:id```: Altera os dados da agenda com id informado.
+- PUT ```/materias/:id```: Altera os dados do material com id informado.
 
 ### DELETE
-- DELETE  ```/alunos/:id```:
-- DELETE  ```/tutores/:id```:
-- DELETE  ```/agendamentos/:id```:
-- DELETE  ```/materias/:id```:
+- DELETE  ```/alunos/:id```: Exclui apenas o aluno com id informado.
+- DELETE  ```/tutores/:id```: Exclui apenas o tutor com id informado.
+- DELETE  ```/agendamentos/:id```: Exclui apenas a agenda com id informado.
+- DELETE  ```/materias/:id```: Exclui apenas o material com id informado.
 
 --- 
 ## 📋 Todo List
 - [x] [Exercício 1 - Setup: Projeto de tutoria](#-m1s10-ex-1---setup-projeto-de-tutoria)
-- [ ] [Exercício 2 - CRUD Alunos](#-m1s10-ex-2---crud-alunos)
+- [x] [Exercício 2 - CRUD Alunos](#-m1s10-ex-2---crud-alunos)
 - [ ] [Exercício 3 - CRUD Tutores](#-m1s10-ex-3---crud-tutores)
 - [ ] [Exercício 4 - CRUD Agendamento](#-m1s10-ex-4---crud-agendamento)
 - [ ] [Exercício 5 - CRUD Materiais](#-m1s10-ex-5---crud-materiais)
