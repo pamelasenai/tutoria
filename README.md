@@ -95,15 +95,17 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 
 --- 
 ## 📋 Todo List
-- [ ] [Exercício 1 - Setup: Projeto de tutoria](#ex-1)
-- [ ] [Exercício 2 - CRUD Alunos](#ex-2)
-- [ ] [Exercício 3 - CRUD Tutores](#ex-3)
-- [ ] [Exercício 4 - CRUD Agendamento](#ex-4)
-- [ ] [Exercício 5 - CRUD Materiais](#ex-5)
-- [ ] [Exercício 6 - Consultar agendamentos](#ex-6)
-- [ ] [Exercício 7 - Consultar próximos agendamentos](#ex-7)
+- [x] [Exercício 1 - Setup: Projeto de tutoria](#-m1s10-ex-1---setup-projeto-de-tutoria)
+- [ ] [Exercício 2 - CRUD Alunos](#-m1s10-ex-2---crud-alunos)
+- [ ] [Exercício 3 - CRUD Tutores](#-m1s10-ex-3---crud-tutores)
+- [ ] [Exercício 4 - CRUD Agendamento](#-m1s10-ex-4---crud-agendamento)
+- [ ] [Exercício 5 - CRUD Materiais](#-m1s10-ex-5---crud-materiais)
+- [ ] [Exercício 6 - Consultar agendamentos](#-m1s10-ex-6---consultar-agendamentos)
+- [ ] [Exercício 7 - Consultar próximos agendamentos](#-m1s10-ex-7---consultar-próximos-agendamentos)
 
-## EX 1
+
+## 📂 Descrição dos exercícios
+### 📖 [M1S10] Ex 1 - Setup: Projeto de tutoria
 Criar uma plataforma que conecte alunos que precisam de ajuda extra em determinadas disciplinas com tutores qualificados.
 A plataforma deve incluir:
 - Agendamento de sessões de tutoria.
@@ -127,27 +129,27 @@ Criar entidades:
 - - Descrição
 - - Caminho do arquivo (armazenar URLs ou caminhos de pastas)
 
-## Ex 2
+### 📖 [M1S10] Ex 2 - CRUD Alunos
 Criar CRUD para a entidade Aluno.<br/>
 Utilize adequadamente os padrões REST e MVC.<br/>
 Não se esqueça do tratamento de exceções, status de resposta e seus métodos HTTP.
 
-## Ex 3
+### 📖 [M1S10] Ex 3 - CRUD Tutores
 Criar CRUD para a entidade Tutor.<br/>
 Utilize adequadamente os padrões REST e MVC.<br/>
 Não se esqueça do tratamento de exceções, status de resposta e seus métodos HTTP.
 
-## Ex 4
+### 📖 [M1S10] Ex 4 - CRUD Agendamento
 Criar CRUD para a entidade Agenda.<br/>
 Utilize adequadamente os padrões REST e MVC.<br/>
 Não se esqueça do tratamento de exceções, status de resposta e seus métodos HTTP.
 
-## Ex 5
+### 📖 [M1S10] Ex 5 - CRUD Materiais
 Criar CRUD para a entidade Material.<br/>
 Utilize adequadamente os padrões REST e MVC.<br/>
 Não se esqueça do tratamento de exceções, status de resposta e seus métodos HTTP.
 
-## Ex 6
+### 📖 [M1S10] Ex 6 - Consultar agendamentos
 Criar endpoints para consultar TODOS os agendamentos pertencentes para alunos e tutores.<br/>
 Endpoints:
 - GET /agendamentos/aluno-id/{alunoId}
@@ -157,7 +159,7 @@ Endpoints:
 
 Não se esqueça do tratamento de exceções, status de resposta e seus métodos HTTP.
 
-## Ex 7
+### 📖 [M1S10] Ex 7 - Consultar próximos agendamentos
 1. Criar endpoints para consultar OS PRÓXIMOS agendamentos pertencentes para alunos e tutores.
 2. Criar endpoints distintos para alunos e tutores, assim como o exercício anterior.
 3. Retornar os registros em ordem crescente de data
