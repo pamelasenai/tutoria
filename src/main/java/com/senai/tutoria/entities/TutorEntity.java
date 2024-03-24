@@ -14,6 +14,6 @@ public class TutorEntity {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 150)
     private String especialidade;
 }
