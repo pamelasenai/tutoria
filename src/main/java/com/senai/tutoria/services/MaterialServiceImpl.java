@@ -1,5 +1,6 @@
 package com.senai.tutoria.services;
 
+import com.senai.tutoria.entities.AgendaEntity;
 import com.senai.tutoria.entities.MaterialEntity;
 import com.senai.tutoria.exception.NotFoundException;
 import com.senai.tutoria.repositories.MaterialRepository;
@@ -13,6 +14,7 @@ import java.util.regex.Pattern;
 @Service
 @RequiredArgsConstructor
 public class MaterialServiceImpl implements MaterialService {
+    private final AgendaService agendaService;
     private final MaterialRepository repository;
 
     @Override
@@ -26,6 +28,8 @@ public class MaterialServiceImpl implements MaterialService {
         ) {
             throw new RuntimeException("Caminho do arquivo é invalido.");
         }
+        AgendaEntity agenda = agendaService.buscarPorId(material.getAgenda().getId());
+        material.setAgenda(agenda);
 
         return repository.save(material);
     }
@@ -45,7 +49,7 @@ public class MaterialServiceImpl implements MaterialService {
     @Override
     public MaterialEntity alterar(Long id, MaterialEntity material) {
         material.setId(id);
-        MaterialEntity materialEntity = buscarPorId(id);
+        buscarPorId(id);
 
         if(
                 material.getCaminhoArquivo() == null ||
@@ -54,6 +58,9 @@ public class MaterialServiceImpl implements MaterialService {
         ) {
             throw new RuntimeException("Caminho do arquivo é invalido.");
         }
+
+        AgendaEntity agenda = agendaService.buscarPorId(material.getAgenda().getId());
+        material.setAgenda(agenda);
 
         return repository.save(material);
     }
