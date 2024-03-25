@@ -25,6 +25,16 @@ public class AgendaController {
         return ResponseEntity.ok().body(service.buscarPorId(id));
     }
 
+    @GetMapping("aluno-id/{alunoId}")
+    public ResponseEntity<List<AgendaEntity>> getPorAlunoId(@PathVariable Long alunoId) {
+        return ResponseEntity.ok().body(service.buscarPorAlunoId(alunoId));
+    }
+
+    @GetMapping("tutor-id/{tutorId}")
+    public ResponseEntity<List<AgendaEntity>> getPorTutorId(@PathVariable Long tutorId) {
+        return ResponseEntity.ok().body(service.buscarPorTutorId(tutorId));
+    }
+
     @PostMapping
     public ResponseEntity<AgendaEntity> post(@RequestBody AgendaEntity agenda) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(agenda));
