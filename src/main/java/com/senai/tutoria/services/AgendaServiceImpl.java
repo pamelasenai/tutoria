@@ -8,6 +8,9 @@ import com.senai.tutoria.repositories.AgendaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
@@ -61,6 +64,18 @@ public class AgendaServiceImpl implements AgendaService {
     }
 
     @Override
+    public List<AgendaEntity> buscarProximosPorAlunoId(Long alunoId) {
+        alunoService.buscarPorId(alunoId);
+        return repository.findByAlunoIdAndDataGreaterThanOrderByData(alunoId, dataFormatada());
+    }
+
+    @Override
+    public List<AgendaEntity> buscarProximosPorTutorId(Long tutorId) {
+        tutorService.buscarPorId(tutorId);
+        return repository.findByTutorIdAndDataGreaterThanOrderByData(tutorId, dataFormatada());
+    }
+
+    @Override
     public AgendaEntity alterar(Long id, AgendaEntity agenda) {
         AgendaEntity agendaEntity = buscarPorId(id);
         agenda.setId(id);
@@ -88,5 +103,12 @@ public class AgendaServiceImpl implements AgendaService {
     public void excluir(Long id) {
         buscarPorId(id);
         repository.deleteById(id);
+    }
+
+    private LocalDate dataFormatada() {
+        LocalDate dataAtual = LocalDate.now();
+        LocalDate data = dataAtual.minusDays(1);
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return LocalDate.parse(data.format(formatador));
     }
 }

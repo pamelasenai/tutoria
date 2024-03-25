@@ -85,9 +85,12 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 - GET ```/tutores/:id```: Retorna apenas o tutor com id informado.
 - GET ```/agendamentos/:id```: Retorna apenas a agenda com id informado.
 - GET ```/materias/:id```: Retorna apenas o material com id informado.
-- 
+
 - GET ```/agendamentos/aluno-id/:id```: Retorna lista de agendamentos para o aluno com id informado.
 - GET ```/agendamentos/tutor-id/:id```: Retorna lista de agendamentos para o tutor com id informado.
+
+- GET ```/agendamentos/aluno-id/:id/proximos```: Retorna lista com os próximos agendamentos para o aluno com id informado.
+- GET ```/agendamentos/tutor-id/:id/proximos```: Retorna lista com os próximos agendamentos para o tutor com id informado.
 
 ### UPDATE
 - PUT ```/alunos/:id```: Altera os dados do aluno com id informado.
@@ -147,7 +150,7 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 - [x] [Exercício 4 - CRUD Agendamento](#-m1s10-ex-4---crud-agendamento)
 - [x] [Exercício 5 - CRUD Materiais](#-m1s10-ex-5---crud-materiais)
 - [x] [Exercício 6 - Consultar agendamentos](#-m1s10-ex-6---consultar-agendamentos)
-- [ ] [Exercício 7 - Consultar próximos agendamentos](#-m1s10-ex-7---consultar-próximos-agendamentos)
+- [x] [Exercício 7 - Consultar próximos agendamentos](#-m1s10-ex-7---consultar-próximos-agendamentos)
 
 
 ## 📂 Descrição dos exercícios
