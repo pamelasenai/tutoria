@@ -67,12 +67,13 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
     * RequestBody:
       ```json
             {
-                "titulo": "titulo",
-                "autor": "autor",
-                "anoPublicacao": 2025
+                "descricao": "Google",
+                "caminhoArquivo": "http://www.google.com.br/",
+                "agenda": {
+                "id": 3
+                }
             }
         ```
-<!-- //TODO alterar RequestBody-->
 
 ### READ
 - GET ```/alunos```: Retorna lista de todos os alunos.
@@ -118,6 +119,16 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
             }
         ```
 - PUT ```/materias/:id```: Altera os dados do material com id informado.
+    * RequestBody:
+      ```json
+            {
+                "descricao": "Google",
+                "caminhoArquivo": "http://www.google.com.br/",
+                "agenda": {
+                "id": 3
+                }
+            }
+        ```
 
 ### DELETE
 - DELETE  ```/alunos/:id```: Exclui apenas o aluno com id informado.
@@ -131,7 +142,7 @@ O objetivo é ser uma plataforma que conecta alunos que precisam de assistência
 - [x] [Exercício 2 - CRUD Alunos](#-m1s10-ex-2---crud-alunos)
 - [x] [Exercício 3 - CRUD Tutores](#-m1s10-ex-3---crud-tutores)
 - [x] [Exercício 4 - CRUD Agendamento](#-m1s10-ex-4---crud-agendamento)
-- [ ] [Exercício 5 - CRUD Materiais](#-m1s10-ex-5---crud-materiais)
+- [x] [Exercício 5 - CRUD Materiais](#-m1s10-ex-5---crud-materiais)
 - [ ] [Exercício 6 - Consultar agendamentos](#-m1s10-ex-6---consultar-agendamentos)
 - [ ] [Exercício 7 - Consultar próximos agendamentos](#-m1s10-ex-7---consultar-próximos-agendamentos)
 
@@ -145,21 +156,21 @@ A plataforma deve incluir:
 
 Criar entidades:
 - Aluno
-- - Nome
-- Tutor
-- - Nome
-- - Especialidade
+  - Nome
+  Tutor
+  - Nome
+  - Especialidade
 - Agenda
-- - Aluno
-- - Tutor
-- - Data
-- - Status
-- - Tema
-- - Descrição breve
+  - Aluno
+  - Tutor
+  - Data
+  - Status
+  - Tema
+  - Descrição breve
 - Material
-- - Agenda
-- - Descrição
-- - Caminho do arquivo (armazenar URLs ou caminhos de pastas)
+  - Agenda
+  - Descrição
+  - Caminho do arquivo (armazenar URLs ou caminhos de pastas)
 
 ### 📖 [M1S10] Ex 2 - CRUD Alunos
 Criar CRUD para a entidade Aluno.<br/>
